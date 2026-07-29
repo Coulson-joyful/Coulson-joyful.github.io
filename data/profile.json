@@ -40,15 +40,15 @@
   ],
   "featuredProjects": [
     {
-      "name": "imessage-claude-remote",
-      "desc": "通过 iMessage 远程遥控 Claude Code,手机随时下发任务并接收结果。",
-      "url": "https://github.com/Coulson-joyful",
-      "tags": ["自动化", "iMessage", "Claude"]
+      "name": "claude-iMessage-notify",
+      "desc": "让 Claude 通过 iMessage 把任务结果 / 完成通知推送回手机的自动化脚本。",
+      "url": "https://github.com/Coulson-joyful/claude-iMessage-notify",
+      "tags": ["自动化", "iMessage", "Python"]
     },
     {
       "name": "Coulson-joyful.github.io",
       "desc": "本站 —— 纯静态、零构建的个人主页与博客。",
-      "url": "https://coulson-joyful.github.io",
+      "url": "https://github.com/Coulson-joyful/Coulson-joyful.github.io",
       "tags": ["静态站点", "GitHub Pages"]
     }
   ],
