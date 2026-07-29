@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coulson · 个人主页</title>
+  <meta name="description" content="Coulson (Coulson-joyful) 的个人主页 —— 作品集、简历、博客与链接聚合。" />
+  <meta name="theme-color" content="#f5f5f7" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Coulson · 个人主页" />
+  <meta property="og:description" content="开发者 · 独立创造者。作品集、简历、博客与链接聚合。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://coulson-joyful.github.io" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- 毛玻璃吸顶导航 -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top">Coulson-joyful</a>
+      <nav class="nav__links" aria-label="主导航">
+        <a href="#about">简历</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">作品</a>
+        <a href="#blog">博客</a>
+        <a href="#links">链接</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色 / 浅色模式">
+        <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+      </button>
+      <button class="nav__burger" id="navBurger" type="button" aria-label="展开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero / 名片 -->
+    <section class="hero container reveal" id="hero">
+      <img class="hero__avatar" id="heroAvatar" src="assets/img/avatar.svg" alt="头像" />
+      <h1 class="hero__title" id="heroName">—</h1>
+      <p class="hero__tagline" id="heroTagline">—</p>
+      <p class="hero__intro" id="heroIntro">—</p>
+      <p class="hero__meta"><span id="heroLocation"></span></p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#projects">看看作品</a>
+        <a class="btn btn--ghost" href="#links" id="heroContact">联系我</a>
+      </div>
+    </section>
+
+    <!-- About / 简历 -->
+    <section class="section container reveal" id="about">
+      <h2 class="section__title">简历</h2>
+      <p class="section__lead" id="resumeSummary">—</p>
+      <div class="timeline" id="experience"></div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section container reveal" id="skills">
+      <h2 class="section__title">技能</h2>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- Projects / 作品集 -->
+    <section class="section container reveal" id="projects">
+      <div class="section__head">
+        <h2 class="section__title">作品</h2>
+        <span class="section__hint" id="projectsHint">从 GitHub 自动获取</span>
+      </div>
+      <div class="cards-grid" id="projectsGrid">
+        <p class="muted">加载中…</p>
+      </div>
+    </section>
+
+    <!-- Blog 预览 -->
+    <section class="section container reveal" id="blog">
+      <div class="section__head">
+        <h2 class="section__title">博客</h2>
+        <a class="section__hint link" href="blog/">全部文章 →</a>
+      </div>
+      <div class="cards-grid" id="blogGrid">
+        <p class="muted">加载中…</p>
+      </div>
+    </section>
+
+    <!-- Links / 聚合 -->
+    <section class="section container reveal" id="links">
+      <h2 class="section__title">链接</h2>
+      <div class="links-grid" id="linksGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> <span id="footerName">Coulson</span>. Built with plain HTML/CSS/JS.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

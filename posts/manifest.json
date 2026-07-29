@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "2026-07-hello-world",
+    "title": "Hello World —— 这个博客是怎么搭起来的",
+    "date": "2026-07-29",
+    "summary": "用纯静态 HTML + marked.js 搭一个零构建、写 Markdown 就能发文的博客。",
+    "tags": ["建站", "GitHub Pages", "Markdown"]
+  }
+]

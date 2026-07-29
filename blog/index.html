@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>博客 · Coulson</title>
+  <meta name="description" content="Coulson 的博客文章。" />
+  <meta name="theme-color" content="#f5f5f7" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/blog.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="../">← Coulson-joyful</a>
+      <nav class="nav__links" aria-label="主导航">
+        <a href="../#projects">作品</a>
+        <a href="../#links">链接</a>
+        <a href="./">博客</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色 / 浅色模式">
+        <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container blog">
+    <!-- 列表视图 -->
+    <section id="listView">
+      <h1 class="section__title">博客</h1>
+      <p class="section__lead">想到什么写什么 —— 建站、工具、折腾记录。</p>
+      <div class="cards-grid" id="postList">
+        <p class="muted">加载中…</p>
+      </div>
+    </section>
+
+    <!-- 文章视图 -->
+    <article id="postView" hidden>
+      <a class="link post__back" href="./">← 返回列表</a>
+      <div class="post__content" id="postContent"></div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Coulson. Built with plain HTML/CSS/JS.</p>
+    </div>
+  </footer>
+
+  <!-- marked.js via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script src="../assets/js/blog.js" defer></script>
+</body>
+</html>

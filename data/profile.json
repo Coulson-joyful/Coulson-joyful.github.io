@@ -1,0 +1,60 @@
+{
+  "name": "Coulson",
+  "handle": "Coulson-joyful",
+  "tagline": "开发者 · 独立创造者",
+  "intro": "热爱把想法变成能跑起来的东西。专注于自动化、工具链与优雅的用户体验。",
+  "avatar": "assets/img/avatar.svg",
+  "location": "中国 · 上海",
+  "email": "Coulson-joyful@example.com",
+  "githubUser": "Coulson-joyful",
+  "resume": {
+    "summary": "全栈方向的独立开发者,喜欢用最简单的方案解决真实问题。",
+    "experience": [
+      {
+        "role": "独立开发者 / Indie Hacker",
+        "org": "自由职业",
+        "period": "2024 — 至今",
+        "detail": "构建个人工具与自动化项目,例如 iMessage 遥控、知识库自动化等。"
+      },
+      {
+        "role": "软件工程师",
+        "org": "占位公司名",
+        "period": "2022 — 2024",
+        "detail": "参与产品从 0 到 1 的设计与开发,负责核心模块与工程实践落地。"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "group": "语言",
+      "items": ["JavaScript / TypeScript", "Python", "Swift", "Shell"]
+    },
+    {
+      "group": "前端",
+      "items": ["HTML / CSS", "React", "Vite", "响应式设计"]
+    },
+    {
+      "group": "后端 & 工具",
+      "items": ["Node.js", "Git", "GitHub Actions", "自动化脚本"]
+    }
+  ],
+  "featuredProjects": [
+    {
+      "name": "imessage-claude-remote",
+      "desc": "通过 iMessage 远程遥控 Claude Code,手机随时下发任务并接收结果。",
+      "url": "https://github.com/Coulson-joyful",
+      "tags": ["自动化", "iMessage", "Claude"]
+    },
+    {
+      "name": "Coulson-joyful.github.io",
+      "desc": "本站 —— 纯静态、零构建的个人主页与博客。",
+      "url": "https://coulson-joyful.github.io",
+      "tags": ["静态站点", "GitHub Pages"]
+    }
+  ],
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/Coulson-joyful", "icon": "github" },
+    { "label": "邮箱", "url": "mailto:Coulson-joyful@example.com", "icon": "mail" },
+    { "label": "博客", "url": "blog/", "icon": "rss" }
+  ]
+}
