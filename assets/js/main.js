@@ -114,16 +114,31 @@ function renderProfile(p) {
 
   // 链接
   $("#linksGrid").innerHTML = (p.links || [])
-    .map(
-      (l) => `
-      <a class="link-card" href="${esc(l.url)}" ${
-        /^https?:/.test(l.url) ? 'target="_blank" rel="noopener"' : ""
+    .map((l) => {
+      const { url, external } = resolveLinkUrl(l);
+      return `
+      <a class="link-card" href="${esc(url)}" ${
+        external ? 'target="_blank" rel="noopener"' : ""
       }>
         ${iconFor(l.icon)}
         <span class="link-card__label">${esc(l.label)}</span>
-      </a>`
-    )
+      </a>`;
+    })
     .join("");
+}
+
+/* ---------- 链接地址解析 ----------
+   邮箱(mailto:)统一改成 Gmail 网页写信,新标签打开,不再唤起本地邮件客户端。 */
+function resolveLinkUrl(l) {
+  const raw = String(l.url || "");
+  if (l.icon === "mail" || raw.toLowerCase().startsWith("mailto:")) {
+    const addr = raw.replace(/^mailto:/i, "").split("?")[0].trim();
+    return {
+      url: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(addr)}`,
+      external: true,
+    };
+  }
+  return { url: raw, external: /^https?:/i.test(raw) };
 }
 
 /* ---------- 精选项目卡片(降级用) ---------- */
