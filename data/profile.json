@@ -5,7 +5,7 @@
   "intro": "热爱把想法变成能跑起来的东西。专注于自动化、工具链与优雅的用户体验。",
   "avatar": "https://avatars.githubusercontent.com/u/292373404?v=4",
   "location": "中国 · 上海",
-  "email": "Coulson-joyful@example.com",
+  "email": "liuyf21@tsinghua.org.cn",
   "githubUser": "Coulson-joyful",
   "resume": {
     "summary": "全栈方向的独立开发者,喜欢用最简单的方案解决真实问题。",
@@ -54,7 +54,7 @@
   ],
   "links": [
     { "label": "GitHub", "url": "https://github.com/Coulson-joyful", "icon": "github" },
-    { "label": "邮箱", "url": "mailto:Coulson-joyful@example.com", "icon": "mail" },
+    { "label": "邮箱", "url": "mailto:liuyf21@tsinghua.org.cn", "icon": "mail" },
     { "label": "博客", "url": "blog/", "icon": "rss" }
   ]
 }
