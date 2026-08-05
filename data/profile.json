@@ -54,12 +54,12 @@
   ],
   "links": [
     { "label": "GitHub", "url": "https://github.com/Coulson-joyful", "icon": "github", "nav": true },
-    { "label": "邮箱", "url": "mailto:liuyf21@tsinghua.org.cn", "icon": "mail" },
     { "label": "博客", "url": "blog/", "icon": "rss" },
-    { "label": "B站", "url": "https://space.bilibili.com/104105410", "icon": "bilibili", "nav": true },
-    { "label": "微博", "url": "https://weibo.com/u/9036435893", "icon": "weibo", "nav": true },
-    { "label": "小红书", "url": "https://www.xiaohongshu.com/user/profile/661b7af800000000030323df", "icon": "xiaohongshu", "nav": true },
+    { "label": "邮箱", "url": "mailto:liuyf21@tsinghua.org.cn", "icon": "mail" },
     { "label": "YouTube", "url": "https://www.youtube.com/@coulson.joyful", "icon": "youtube", "nav": true },
-    { "label": "Instagram", "url": "https://www.instagram.com/coulson.joyful/", "icon": "instagram", "nav": true }
+    { "label": "B站", "url": "https://space.bilibili.com/104105410", "icon": "bilibili", "nav": true },
+    { "label": "Instagram", "url": "https://www.instagram.com/coulson.joyful/", "icon": "instagram", "nav": true },
+    { "label": "微博", "url": "https://weibo.com/u/9036435893", "icon": "weibo", "nav": true },
+    { "label": "小红书", "url": "https://www.xiaohongshu.com/user/profile/661b7af800000000030323df", "icon": "xiaohongshu", "nav": true }
   ]
 }
