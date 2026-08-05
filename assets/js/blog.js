@@ -65,7 +65,8 @@ async function renderPost(slug, posts) {
   try {
     const res = await fetch(`../posts/${encodeURIComponent(slug)}.md`);
     if (!res.ok) throw new Error("md 加载失败");
-    const md = await res.text();
+    // 去掉正文最开头的第一个 H1(与 manifest 的 title 重复);不影响 ## 及正文其他标题
+    const md = (await res.text()).replace(/^﻿?\s*#\s+[^\n]*\n+/, "");
 
     const header = `
       <header class="post__header">
