@@ -131,6 +131,21 @@ function renderProfile(p) {
       </a>`;
     })
     .join("");
+
+  // 导航栏社交图标(profile.links 里带 "nav": true 的)
+  const navSocial = $("#navSocial");
+  if (navSocial) {
+    navSocial.innerHTML = (p.links || [])
+      .filter((l) => l.nav)
+      .map((l) => {
+        const { url, external } = resolveLinkUrl(l);
+        return `
+      <a href="${esc(url)}" aria-label="${esc(l.label)}" title="${esc(l.label)}"${
+          external ? ' target="_blank" rel="noopener"' : ""
+        }>${iconFor(l.icon)}</a>`;
+      })
+      .join("");
+  }
 }
 
 /* ---------- 链接地址解析 ----------

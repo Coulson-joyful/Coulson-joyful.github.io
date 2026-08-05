@@ -108,6 +108,17 @@ img { max-width: 100%; display: block; }
 }
 .theme-toggle:hover { background: var(--bg-elevated); transform: scale(1.05); }
 
+.nav__social { display: flex; align-items: center; gap: 2px; }
+.nav__social a {
+  display: grid; place-items: center;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.nav__social a:hover { color: var(--text); background: var(--bg-elevated); transform: scale(1.05); }
+.nav__social .link-card__icon { width: 18px; height: 18px; color: currentColor; }
+
 .nav__burger { display: none; margin-left: var(--space-2); width: 34px; height: 34px;
   background: transparent; border: none; cursor: pointer; flex-direction: column;
   justify-content: center; gap: 5px; padding: 0; }
@@ -238,6 +249,12 @@ img { max-width: 100%; display: block; }
   .nav__links a:last-child { border-bottom: none; }
   .nav__burger { display: flex; margin-left: auto; }
   .theme-toggle { margin-left: 0; }
+  /* 移动端顶栏收紧,保证品牌名 + 社交图标 + 主题键 + 菜单不溢出 */
+  .nav__inner { gap: var(--space-2); }
+  .nav__social { margin-left: auto; gap: 0; }
+  .nav__social a { width: 30px; height: 30px; }
+  .nav__social .link-card__icon { width: 17px; height: 17px; }
+  .nav__burger { margin-left: 0; }
 }
 
 /* ---------- 尊重减弱动效偏好 ---------- */
