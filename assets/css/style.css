@@ -121,6 +121,8 @@ img { max-width: 100%; display: block; }
   margin: 0 auto var(--space-3);
   box-shadow: var(--shadow);
   background: var(--bg-elevated);
+  object-fit: cover;
+  object-position: center 26%;
 }
 .hero__title {
   font-size: clamp(48px, 8vw, 80px);
