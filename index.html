@@ -22,8 +22,9 @@
     <div class="container nav__inner">
       <a class="nav__brand" href="#top">Coulson-joyful</a>
       <nav class="nav__links" aria-label="主导航">
-        <a href="#about">简历</a>
-        <a href="#skills">技能</a>
+        <!-- 暂时隐藏:简历 / 技能(去掉 hidden 即可恢复) -->
+        <a href="#about" hidden>简历</a>
+        <a href="#skills" hidden>技能</a>
         <a href="#projects">作品</a>
         <a href="#blog">博客</a>
         <a href="#links">链接</a>
@@ -51,15 +52,15 @@
       </div>
     </section>
 
-    <!-- About / 简历 -->
-    <section class="section container reveal" id="about">
+    <!-- About / 简历 —— 暂时隐藏(去掉 hidden 即可恢复) -->
+    <section class="section container reveal" id="about" hidden>
       <h2 class="section__title">简历</h2>
       <p class="section__lead" id="resumeSummary">—</p>
       <div class="timeline" id="experience"></div>
     </section>
 
-    <!-- Skills -->
-    <section class="section container reveal" id="skills">
+    <!-- Skills —— 暂时隐藏(去掉 hidden 即可恢复) -->
+    <section class="section container reveal" id="skills" hidden>
       <h2 class="section__title">技能</h2>
       <div class="skills-grid" id="skillsGrid"></div>
     </section>
