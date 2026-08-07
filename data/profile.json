@@ -1,41 +1,41 @@
 {
   "name": "Coulson.joyful",
   "handle": "Coulson-joyful",
-  "tagline": "开发者 · 独立创造者",
-  "intro": "把想法变成现实。",
+  "tagline": "AI 新手上路 · 终身学习者",
+  "intro": "从零开始,用 AI 探索更多可能。",
   "avatar": "assets/img/avatar.jpg",
   "location": "中国 · 上海",
   "email": "liuyf21@tsinghua.org.cn",
   "githubUser": "Coulson-joyful",
   "resume": {
-    "summary": "全栈方向的独立开发者,喜欢用最简单的方案解决真实问题。",
+    "summary": "AI 使用新手,喜欢动手尝试、边踩坑边学习,把每个小项目当作练习。",
     "experience": [
       {
-        "role": "独立开发者 / Indie Hacker",
-        "org": "自由职业",
-        "period": "2024 — 至今",
-        "detail": "构建个人工具与自动化项目,例如 iMessage 遥控、知识库自动化等。"
+        "role": "AI 工具探索 & 自学",
+        "org": "个人项目",
+        "period": "2025 — 至今",
+        "detail": "从零上手 Claude、Obsidian 等工具,边踩坑边记录,把想法做成能跑的小东西,例如 iMessage 遥控、知识库自动化。"
       },
       {
-        "role": "软件工程师",
-        "org": "占位公司名",
-        "period": "2022 — 2024",
-        "detail": "参与产品从 0 到 1 的设计与开发,负责核心模块与工程实践落地。"
+        "role": "终身学习者",
+        "org": "持续进行中",
+        "period": "一直在路上",
+        "detail": "保持好奇,遇到不懂的就动手查、动手试,把每一次学习都沉淀成笔记。"
       }
     ]
   },
   "skills": [
     {
-      "group": "语言",
-      "items": ["JavaScript / TypeScript", "Python", "Swift", "Shell"]
+      "group": "正在学",
+      "items": ["AI 工具(Claude / ChatGPT)", "Obsidian 知识管理", "命令行 / Git 基础", "Markdown 写作"]
     },
     {
-      "group": "前端",
-      "items": ["HTML / CSS", "React", "Vite", "响应式设计"]
+      "group": "想深入",
+      "items": ["与 AI 协作 / Prompt", "自动化脚本", "静态网站搭建"]
     },
     {
-      "group": "后端 & 工具",
-      "items": ["Node.js", "Git", "GitHub Actions", "自动化脚本"]
+      "group": "习惯",
+      "items": ["记笔记", "边做边学", "保持好奇"]
     }
   ],
   "featuredProjects": [

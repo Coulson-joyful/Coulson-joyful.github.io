@@ -225,6 +225,8 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Footer ---------- */
 .footer { padding: var(--space-4) 0; text-align: center; color: var(--text-secondary); font-size: 13px; border-top: 1px solid var(--border); margin-top: var(--space-5); }
+.footer p { margin: 0; }
+.footer-note { margin-top: 4px; font-size: 12px; opacity: 0.7; }
 
 /* ---------- 滚动淡入动效 ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
