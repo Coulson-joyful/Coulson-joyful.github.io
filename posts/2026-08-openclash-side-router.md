@@ -57,3 +57,25 @@ uci commit && reboot
 ## 结果
 
 连红米 Wi-Fi 的任何设备:国内网站直连(百度 200),境外自动走节点(Google 204),出口 IP 落在境外。一张 Wi-Fi,既快又广,还自动科学上网,全程无感。红米负责发网,GL 当隐形的「大脑」做分流。
+
+## 出门:把 GL 带走,红米先复原
+
+别忘了 GL 本职还是台旅行路由器。要把它带出门,不能拔了就走——这套方案的隐藏前提是「全屋网关已经交给 GL、红米的 DHCP 是关的」,GL 一走,家里所有设备拿不到地址,**全屋断网**。顺序得反过来:先救红米,再改 GL。
+
+**第一步:红米变回完整主路由。** 登录红米后台,把第 2 步关掉的 DHCP 重新打开即可——设备重连后网关和 DNS 自然回到红米自己,全屋恢复上网(直连、无代理)。等于把那个「总开关」拨回去。
+
+**第二步:GL 变回旅行路由。** 把旁路由那套配置反着撤掉:LAN 改回独立网段、重新自己发 DHCP、上游从「借红米 LAN」换回 WAN 口接当地网络。
+
+```sh
+# LAN 改回独立网段,自己当网关(不再指红米)
+uci set network.lan.ipaddr='192.168.8.1'
+uci -q delete network.lan.gateway
+uci -q delete network.lan.dns
+# 撤掉「网关 / DNS 都指向自己」的 DHCP 下发
+uci -q delete dhcp.lan.dhcp_option
+# 重新启用 WAN,接当地网络
+uci set network.wan.disabled='0'
+uci commit && reboot
+```
+
+到了酒店 / 机场,GL 的上游可以是三选一:网线插 **WAN 口**、用 **Repeater** 中继现场 Wi-Fi、或 **USB Tethering** 借手机热点。设备照旧连 GL 自己的 Wi-Fi,OpenClash 分流原样能用——只是这回它从「隐形的大脑」变回了独当一面的小路由。
