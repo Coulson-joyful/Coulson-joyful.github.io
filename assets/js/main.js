@@ -97,31 +97,6 @@ function renderProfile(p) {
   $("#footerName").textContent = p.name || p.handle || "Coulson";
   document.title = `${p.name || p.handle} · 个人主页`;
 
-  // 简历
-  if (p.resume?.summary) $("#resumeSummary").textContent = p.resume.summary;
-  const exp = $("#experience");
-  exp.innerHTML = (p.resume?.experience || [])
-    .map(
-      (x) => `
-      <article class="timeline__item">
-        <p class="timeline__role">${esc(x.role)}</p>
-        <p class="timeline__meta">${esc(x.org)} · ${esc(x.period)}</p>
-        <p class="timeline__detail">${esc(x.detail)}</p>
-      </article>`
-    )
-    .join("");
-
-  // 技能
-  $("#skillsGrid").innerHTML = (p.skills || [])
-    .map(
-      (g) => `
-      <div class="skill-group">
-        <h3>${esc(g.group)}</h3>
-        <ul>${(g.items || []).map((i) => `<li>${esc(i)}</li>`).join("")}</ul>
-      </div>`
-    )
-    .join("");
-
   // 链接
   $("#linksGrid").innerHTML = (p.links || [])
     .map((l) => {

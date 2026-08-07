@@ -7,37 +7,6 @@
   "location": "中国 · 上海",
   "email": "liuyf21@tsinghua.org.cn",
   "githubUser": "Coulson-joyful",
-  "resume": {
-    "summary": "AI 使用新手,喜欢动手尝试、边踩坑边学习,把每个小项目当作练习。",
-    "experience": [
-      {
-        "role": "AI 工具探索 & 自学",
-        "org": "个人项目",
-        "period": "2025 — 至今",
-        "detail": "从零上手 Claude、Obsidian 等工具,边踩坑边记录,把想法做成能跑的小东西,例如 iMessage 遥控、知识库自动化。"
-      },
-      {
-        "role": "终身学习者",
-        "org": "持续进行中",
-        "period": "一直在路上",
-        "detail": "保持好奇,遇到不懂的就动手查、动手试,把每一次学习都沉淀成笔记。"
-      }
-    ]
-  },
-  "skills": [
-    {
-      "group": "正在学",
-      "items": ["AI 工具(Claude / ChatGPT)", "Obsidian 知识管理", "命令行 / Git 基础", "Markdown 写作"]
-    },
-    {
-      "group": "想深入",
-      "items": ["与 AI 协作 / Prompt", "自动化脚本", "静态网站搭建"]
-    },
-    {
-      "group": "习惯",
-      "items": ["记笔记", "边做边学", "保持好奇"]
-    }
-  ],
   "featuredProjects": [
     {
       "name": "claude-iMessage-notify",
