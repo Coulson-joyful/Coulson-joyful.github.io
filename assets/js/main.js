@@ -86,27 +86,35 @@ function initReveal() {
   els.forEach((el) => io.observe(el));
 }
 
+/* ---------- 模块级缓存(语言切换时用它重渲染,不重复 fetch) ---------- */
+const state = { profile: null, repos: null, posts: null };
+
 /* ---------- 渲染 profile ---------- */
-function renderProfile(p) {
+function renderProfile() {
+  const p = state.profile;
+  if (!p) return;
+  const lang = i18n.getLang();
+
   // Hero
   if (p.avatar) $("#heroAvatar").src = p.avatar;
   $("#heroName").textContent = p.name || p.handle || "";
-  $("#heroTagline").textContent = p.tagline || "";
-  $("#heroIntro").textContent = p.intro || "";
-  $("#heroLocation").textContent = p.location || "";
+  $("#heroTagline").textContent = i18n.pick(p.tagline, lang) || "";
+  $("#heroIntro").textContent = i18n.pick(p.intro, lang) || "";
+  $("#heroLocation").textContent = i18n.pick(p.location, lang) || "";
   $("#footerName").textContent = p.name || p.handle || "Coulson";
-  document.title = `${p.name || p.handle} · 个人主页`;
+  document.title = `${p.name || p.handle}${i18n.t("doc_home_suffix", lang)}`;
 
   // 链接
   $("#linksGrid").innerHTML = (p.links || [])
     .map((l) => {
       const { url, external } = resolveLinkUrl(l);
+      const label = i18n.pick(l.label, lang);
       return `
       <a class="link-card" href="${esc(url)}" ${
         external ? 'target="_blank" rel="noopener"' : ""
       }>
         ${iconFor(l.icon)}
-        <span class="link-card__label">${esc(l.label)}</span>
+        <span class="link-card__label">${esc(label)}</span>
       </a>`;
     })
     .join("");
@@ -118,8 +126,9 @@ function renderProfile(p) {
       .filter((l) => l.nav)
       .map((l) => {
         const { url, external } = resolveLinkUrl(l);
+        const label = esc(i18n.pick(l.label, lang));
         return `
-      <a href="${esc(url)}" aria-label="${esc(l.label)}" title="${esc(l.label)}"${
+      <a href="${esc(url)}" aria-label="${label}" title="${label}"${
           external ? ' target="_blank" rel="noopener"' : ""
         }>${iconFor(l.icon)}</a>`;
       })
@@ -158,21 +167,9 @@ function projectCard({ name, desc, url, tags = [], stars }) {
     </a>`;
 }
 
-/* ---------- GitHub 项目拉取(失败降级到 featuredProjects) ---------- */
-async function renderProjects(p) {
-  const grid = $("#projectsGrid");
-  const hint = $("#projectsHint");
-  const featured = p.featuredProjects || [];
-
-  const renderFeatured = () => {
-    hint.textContent = "精选项目";
-    grid.innerHTML = featured.length
-      ? featured.map(projectCard).join("")
-      : '<p class="muted">暂无项目。</p>';
-  };
-
-  if (!p.githubUser) return renderFeatured();
-
+/* ---------- GitHub 项目拉取(只 fetch,不渲染;失败返回 null 降级) ---------- */
+async function fetchRepos(p) {
+  if (!p.githubUser) return null;
   try {
     const res = await fetch(
       `https://api.github.com/users/${encodeURIComponent(
@@ -180,10 +177,10 @@ async function renderProjects(p) {
       )}/repos?per_page=100&sort=updated`
     );
     if (!res.ok) throw new Error(`GitHub API ${res.status}`);
-    let repos = await res.json();
+    const repos = await res.json();
     if (!Array.isArray(repos)) throw new Error("bad payload");
 
-    repos = repos
+    return repos
       .filter((r) => !r.fork && !r.archived)
       .sort(
         (a, b) =>
@@ -191,12 +188,36 @@ async function renderProjects(p) {
           new Date(b.updated_at) - new Date(a.updated_at)
       )
       .slice(0, 6);
+  } catch (err) {
+    console.warn("GitHub 拉取失败,降级为精选项目:", err);
+    return null;
+  }
+}
 
-    if (!repos.length) return renderFeatured();
+/* ---------- 渲染项目(用缓存的 state.repos,支持语言切换重渲染) ---------- */
+function renderProjects() {
+  const p = state.profile;
+  if (!p) return;
+  const lang = i18n.getLang();
+  const grid = $("#projectsGrid");
+  const hint = $("#projectsHint");
+  const featured = p.featuredProjects || [];
 
-    // 精选项目名 -> 置顶去重
+  const featuredCards = () =>
+    featured
+      .map((f) =>
+        projectCard({
+          name: f.name,
+          desc: i18n.pick(f.desc, lang),
+          url: f.url,
+          tags: f.tags,
+        })
+      )
+      .join("");
+
+  if (state.repos && state.repos.length) {
     const featuredNames = new Set(featured.map((f) => f.name?.toLowerCase()));
-    const apiCards = repos
+    const apiCards = state.repos
       .filter((r) => !featuredNames.has(r.name.toLowerCase()))
       .map((r) =>
         projectCard({
@@ -206,31 +227,46 @@ async function renderProjects(p) {
           tags: r.language ? [r.language] : [],
           stars: r.stargazers_count,
         })
-      );
-
-    hint.textContent = "从 GitHub 自动获取";
-    grid.innerHTML = featured.map(projectCard).join("") + apiCards.join("");
-  } catch (err) {
-    console.warn("GitHub 拉取失败,降级为精选项目:", err);
-    renderFeatured();
+      )
+      .join("");
+    hint.textContent = i18n.t("hint_github", lang);
+    grid.innerHTML = featuredCards() + apiCards;
+  } else {
+    hint.textContent = i18n.t("hint_featured", lang);
+    grid.innerHTML = featured.length
+      ? featuredCards()
+      : `<p class="muted">${i18n.t("no_projects", lang)}</p>`;
   }
 }
 
-/* ---------- 博客预览(读 manifest,取最新 3 篇) ---------- */
-async function renderBlogPreview() {
-  const grid = $("#blogGrid");
+/* ---------- 博客预览:只 fetch,取最新 3 篇 ---------- */
+async function fetchPosts() {
   try {
     const posts = await fetch("posts/manifest.json").then((r) => {
       if (!r.ok) throw new Error("no manifest");
       return r.json();
     });
-    const latest = [...posts]
+    return [...posts]
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 3);
-    grid.innerHTML = latest.length
-      ? latest
-          .map(
-            (post) => `
+  } catch (err) {
+    console.warn("博客预览加载失败:", err);
+    return null; // 区分「加载失败」与「空列表」
+  }
+}
+
+/* ---------- 渲染博客预览(卡片标题/摘要来自 manifest,保持中文原样) ---------- */
+function renderBlogPreview() {
+  const grid = $("#blogGrid");
+  const lang = i18n.getLang();
+  if (state.posts === null) {
+    grid.innerHTML = `<p class="muted">${i18n.t("blog_unavailable", lang)}</p>`;
+    return;
+  }
+  grid.innerHTML = state.posts.length
+    ? state.posts
+        .map(
+          (post) => `
         <a class="card" href="blog/?post=${encodeURIComponent(post.slug)}">
           <h3 class="card__title">${esc(post.title)}</h3>
           <div class="card__meta">${esc(post.date)}</div>
@@ -239,13 +275,16 @@ async function renderBlogPreview() {
             .map((t) => `<span class="tag">${esc(t)}</span>`)
             .join("")}</div>
         </a>`
-          )
-          .join("")
-      : '<p class="muted">还没有文章。</p>';
-  } catch (err) {
-    console.warn("博客预览加载失败:", err);
-    grid.innerHTML = '<p class="muted">博客暂不可用。</p>';
-  }
+        )
+        .join("")
+    : `<p class="muted">${i18n.t("no_posts", lang)}</p>`;
+}
+
+/* ---------- 语言切换 / 首次加载:用缓存数据统一重渲染 ---------- */
+function renderAll() {
+  renderProfile();
+  renderProjects();
+  renderBlogPreview();
 }
 
 /* ---------- 启动 ---------- */
@@ -254,13 +293,23 @@ async function init() {
   initNav();
   $("#year").textContent = new Date().getFullYear();
 
+  // 语言药丸(会立即 apply 当前语言到所有静态 [data-i18n] 标签)
+  i18n.initLangSwitch($("#langSwitch"));
+  // 语言切换时用已缓存的 state 重渲染动态内容,不重复 fetch
+  window.addEventListener("langchange", renderAll);
+
   try {
-    const profile = await fetch("data/profile.json").then((r) => {
+    state.profile = await fetch("data/profile.json").then((r) => {
       if (!r.ok) throw new Error("no profile.json");
       return r.json();
     });
-    renderProfile(profile);
-    await Promise.all([renderProjects(profile), renderBlogPreview()]);
+    const [repos, posts] = await Promise.all([
+      fetchRepos(state.profile),
+      fetchPosts(),
+    ]);
+    state.repos = repos;
+    state.posts = posts;
+    renderAll();
   } catch (err) {
     console.error("加载 profile.json 失败:", err);
   }

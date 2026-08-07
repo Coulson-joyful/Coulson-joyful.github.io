@@ -1,34 +1,54 @@
 {
   "name": "Coulson.joyful",
   "handle": "Coulson-joyful",
-  "tagline": "AI 新手上路 · 终身学习者",
-  "intro": "从零开始,用 AI 探索更多可能。",
+  "tagline": {
+    "zh": "AI 新手上路 · 终身学习者",
+    "ja": "AI 初心者 · 生涯学習者",
+    "en": "New to AI · Lifelong learner"
+  },
+  "intro": {
+    "zh": "从零开始,用 AI 探索更多可能。",
+    "ja": "ゼロから、AI でより多くの可能性を探る。",
+    "en": "Starting from zero, exploring what's possible with AI."
+  },
   "avatar": "assets/img/avatar.jpg",
-  "location": "中国 · 上海",
+  "location": {
+    "zh": "中国 · 上海",
+    "ja": "中国 · 上海",
+    "en": "Shanghai, China"
+  },
   "email": "liuyf21@tsinghua.org.cn",
   "githubUser": "Coulson-joyful",
   "featuredProjects": [
     {
       "name": "claude-iMessage-notify",
-      "desc": "让 Claude 通过 iMessage 把任务结果 / 完成通知推送回手机的自动化脚本。",
+      "desc": {
+        "zh": "让 Claude 通过 iMessage 把任务结果 / 完成通知推送回手机的自动化脚本。",
+        "ja": "Claude がタスクの結果 / 完了通知を iMessage でスマホに送り返す自動化スクリプト。",
+        "en": "Automation script that lets Claude push task results / completion alerts back to your phone via iMessage."
+      },
       "url": "https://github.com/Coulson-joyful/claude-iMessage-notify",
       "tags": ["自动化", "iMessage", "Python"]
     },
     {
       "name": "Coulson-joyful.github.io",
-      "desc": "本站 —— 纯静态、零构建的个人主页与博客。",
+      "desc": {
+        "zh": "本站 —— 纯静态、零构建的个人主页与博客。",
+        "ja": "このサイト —— 純静的・ゼロビルドの個人ホームページとブログ。",
+        "en": "This site — a pure-static, zero-build personal homepage and blog."
+      },
       "url": "https://github.com/Coulson-joyful/Coulson-joyful.github.io",
       "tags": ["静态站点", "GitHub Pages"]
     }
   ],
   "links": [
     { "label": "GitHub", "url": "https://github.com/Coulson-joyful", "icon": "github", "nav": true },
-    { "label": "博客", "url": "blog/", "icon": "rss" },
-    { "label": "邮箱", "url": "mailto:liuyf21@tsinghua.org.cn", "icon": "mail" },
+    { "label": { "zh": "博客", "ja": "ブログ", "en": "Blog" }, "url": "blog/", "icon": "rss" },
+    { "label": { "zh": "邮箱", "ja": "メール", "en": "Email" }, "url": "mailto:liuyf21@tsinghua.org.cn", "icon": "mail" },
     { "label": "YouTube", "url": "https://www.youtube.com/@coulson.joyful", "icon": "youtube", "nav": true },
-    { "label": "B站", "url": "https://space.bilibili.com/104105410", "icon": "bilibili", "nav": true },
+    { "label": { "zh": "B站", "ja": "Bilibili", "en": "Bilibili" }, "url": "https://space.bilibili.com/104105410", "icon": "bilibili", "nav": true },
     { "label": "Instagram", "url": "https://www.instagram.com/coulson.joyful/", "icon": "instagram", "nav": true },
-    { "label": "微博", "url": "https://weibo.com/u/9036435893", "icon": "weibo", "nav": true },
-    { "label": "小红书", "url": "https://www.xiaohongshu.com/user/profile/661b7af800000000030323df", "icon": "xiaohongshu", "nav": true }
+    { "label": { "zh": "微博", "ja": "Weibo", "en": "Weibo" }, "url": "https://weibo.com/u/9036435893", "icon": "weibo", "nav": true },
+    { "label": { "zh": "小红书", "ja": "RED", "en": "RED" }, "url": "https://www.xiaohongshu.com/user/profile/661b7af800000000030323df", "icon": "xiaohongshu", "nav": true }
   ]
 }

@@ -108,6 +108,32 @@ img { max-width: 100%; display: block; }
 }
 .theme-toggle:hover { background: var(--bg-elevated); transform: scale(1.05); }
 
+/* ---------- 语言切换(分段药丸) ---------- */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  margin-left: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: 980px;
+  overflow: hidden;
+}
+.lang-switch__seg {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.lang-switch__seg + .lang-switch__seg { border-left: 1px solid var(--border); }
+.lang-switch__seg:hover { color: var(--text); }
+.lang-switch__seg.is-active { background: var(--accent); color: #fff; }
+
 .nav__social { display: flex; align-items: center; gap: 2px; }
 .nav__social a {
   display: grid; place-items: center;
@@ -257,6 +283,9 @@ img { max-width: 100%; display: block; }
   .nav__social a { width: 30px; height: 30px; }
   .nav__social .link-card__icon { width: 17px; height: 17px; }
   .nav__burger { margin-left: 0; }
+  /* 语言切换器窄屏收紧,不与社交图标 + 主题键 + 汉堡挤爆 */
+  .lang-switch { margin-left: var(--space-1); }
+  .lang-switch__seg { font-size: 11px; padding: 4px 7px; }
 }
 
 /* ---------- 尊重减弱动效偏好 ---------- */

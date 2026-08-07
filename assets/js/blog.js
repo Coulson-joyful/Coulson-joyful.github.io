@@ -22,6 +22,9 @@ function initTheme() {
   });
 }
 
+/* ---------- 模块级缓存 ---------- */
+const state = { posts: [], slug: null };
+
 /* ---------- 加载 manifest ---------- */
 async function loadManifest() {
   const res = await fetch("../posts/manifest.json");
@@ -30,9 +33,10 @@ async function loadManifest() {
   return [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
-/* ---------- 列表视图 ---------- */
-function renderList(posts) {
+/* ---------- 列表视图(卡片标题/摘要/tags 来自 manifest,保持中文原样) ---------- */
+function renderList() {
   const list = $("#postList");
+  const posts = state.posts;
   list.innerHTML = posts.length
     ? posts
         .map(
@@ -47,7 +51,7 @@ function renderList(posts) {
       </a>`
         )
         .join("")
-    : '<p class="muted">还没有文章。</p>';
+    : `<p class="muted">${i18n.t("no_posts")}</p>`;
 }
 
 /* ---------- 文章视图 ---------- */
@@ -56,7 +60,7 @@ async function renderPost(slug, posts) {
   const container = $("#postContent");
 
   if (!meta) {
-    container.innerHTML = '<p class="muted">找不到这篇文章。</p>';
+    container.innerHTML = `<p class="muted">${i18n.t("post_not_found")}</p>`;
     return;
   }
 
@@ -84,7 +88,7 @@ async function renderPost(slug, posts) {
     container.innerHTML = header + body;
   } catch (err) {
     console.error(err);
-    container.innerHTML = '<p class="muted">文章加载失败。</p>';
+    container.innerHTML = `<p class="muted">${i18n.t("post_load_failed")}</p>`;
   }
 }
 
@@ -94,30 +98,43 @@ function showView(isPost) {
   $("#postView").hidden = !isPost;
 }
 
+/* ---------- 渲染当前视图 ---------- */
+function render() {
+  if (state.slug) {
+    showView(true);
+    renderPost(state.slug, state.posts);
+    window.scrollTo(0, 0);
+  } else {
+    showView(false);
+    renderList();
+  }
+}
+
 /* ---------- 启动 ---------- */
 async function init() {
   initTheme();
   $("#year").textContent = new Date().getFullYear();
 
-  const slug = new URLSearchParams(location.search).get("post");
+  // 语言药丸(立即 apply 当前语言到静态 [data-i18n] 外壳)
+  i18n.initLangSwitch($("#langSwitch"));
 
-  let posts = [];
+  state.slug = new URLSearchParams(location.search).get("post");
+
   try {
-    posts = await loadManifest();
+    state.posts = await loadManifest();
   } catch (err) {
     console.error(err);
-    $("#postList").innerHTML = '<p class="muted">博客加载失败。</p>';
+    $("#postList").innerHTML = `<p class="muted">${i18n.t("blog_load_failed")}</p>`;
     return;
   }
 
-  if (slug) {
-    showView(true);
-    await renderPost(slug, posts);
-    window.scrollTo(0, 0);
-  } else {
-    showView(false);
-    renderList(posts);
-  }
+  render();
+
+  // 语言切换:外壳(nav/标题/lead/返回)由 i18n 自动刷新;
+  // 列表视图重渲染以更新空状态文案,文章正文保持中文原样、不重新 fetch。
+  window.addEventListener("langchange", () => {
+    if (!state.slug) renderList();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", init);

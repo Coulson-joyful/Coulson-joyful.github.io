@@ -15,11 +15,12 @@
     <div class="container nav__inner">
       <a class="nav__brand" href="../">← Coulson-joyful</a>
       <nav class="nav__links" aria-label="主导航">
-        <a href="../#projects">作品</a>
-        <a href="../#links">链接</a>
-        <a href="./">博客</a>
+        <a href="../#projects" data-i18n="nav_projects">作品</a>
+        <a href="../#links" data-i18n="nav_links">链接</a>
+        <a href="./" data-i18n="nav_blog">博客</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色 / 浅色模式">
+      <div id="langSwitch" class="lang-switch" role="group" aria-label="语言 / Language"></div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色 / 浅色模式" data-i18n-attr="aria-label:aria_theme">
         <span class="theme-toggle__icon" aria-hidden="true">◐</span>
       </button>
     </div>
@@ -28,16 +29,16 @@
   <main class="container blog">
     <!-- 列表视图 -->
     <section id="listView">
-      <h1 class="section__title">博客</h1>
-      <p class="section__lead">想到什么写什么 —— 建站、工具、折腾记录。</p>
+      <h1 class="section__title" data-i18n="blog_title">博客</h1>
+      <p class="section__lead" data-i18n="blog_lead">想到什么写什么 —— 建站、工具、折腾记录。</p>
       <div class="cards-grid" id="postList">
-        <p class="muted">加载中…</p>
+        <p class="muted" data-i18n="loading">加载中…</p>
       </div>
     </section>
 
     <!-- 文章视图 -->
     <article id="postView" hidden>
-      <a class="link post__back" href="./">← 返回列表</a>
+      <a class="link post__back" href="./" data-i18n="back">← 返回列表</a>
       <div class="post__content" id="postContent"></div>
     </article>
   </main>
@@ -50,6 +51,7 @@
 
   <!-- marked.js via CDN -->
   <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script src="../assets/js/i18n.js" defer></script>
   <script src="../assets/js/blog.js" defer></script>
 </body>
 </html>
