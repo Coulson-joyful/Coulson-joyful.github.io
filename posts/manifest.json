@@ -1,5 +1,12 @@
 [
   {
+    "slug": "2026-08-greentune-tuner",
+    "title": "造一个「绿色」调音器:零广告、零依赖、2 MB 装下 12 种乐器",
+    "date": "2026-08-07",
+    "summary": "市面调音器广告太脏,索性自己写一个:纯 Apple 框架、零第三方,声音和图标全程序化生成,真机装下才 ~2 MB。记 YIN 防乱跳状态机、@Published 递归崩溃、Menu 被高频刷新冲掉→改 popover 三个坑,以及从吉他到古筝 21 弦的全品类乐器。",
+    "tags": ["Swift", "SwiftUI", "iOS", "个人作品"]
+  },
+  {
     "slug": "2026-08-openclash-side-router",
     "title": "把旅行路由器变成旁路由:全屋 Wi-Fi自动科学上网",
     "date": "2026-08-06",
