@@ -49,8 +49,14 @@ iPhone / Apple Watch 收到通知
 
 ## 这不是「遥控」,而是把时间还给自己
 
-我之前已经把 iMessage 用在了手机与 Mac 上 Claude Code 的双向通讯上,重点是从手机发指令、让 Mac 执行,再收回结果。那套实践记录在[《用 iMessage 双向遥控 Mac 上的 Claude Code》](https://coulson-joyful.github.io/blog/?post=2026-07-imessage-remote-claude)里。
+我之前已经把 iMessage 用在了手机与 Mac 上 Claude Code和Codex 的双向通讯。
 
 这次更想记录的是另一个更日常的角度:即使不远程下指令,只要 AI 能在完成时主动告诉我一声,工作节奏就已经不一样了。AI 跑任务时,我不必守在屏幕前;收到提醒后,再回来接住下一步。
 
 对一个刚入门的 AI 使用者来说,这就是目前最有价值的自动化:不是让系统替我做更多事,而是让我不用把时间花在等待上。
+
+希望这个小小的idea可以帮助到大家。
+
+代码与配置说明都在仓库里:
+Codex：https://github.com/Coulson-joyful/codex-iMessage-notify
+Claude codex：https://github.com/Coulson-joyful/claude-iMessage-notify
