@@ -39,6 +39,21 @@
 
 如果它能帮到和我一样喜欢音乐、刚刚开始学乐器的人，那就已经很好了。
 
-## GreenTune 图标
+## GreenTune 乐器图标
 
-<p class="greentune-icon"><img src="../assets/img/greentune-app-icon.png" alt="GreenTune 应用图标"></p>
+下面是 GreenTune 为不同乐器准备的图标。**所有图标均由 ChatGPT 生成**。
+
+<div class="greentune-icon-grid">
+  <figure><img src="../assets/img/greentune-icons/guitar.png" alt="吉他图标"><figcaption>吉他</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/bass.png" alt="贝斯图标"><figcaption>贝斯</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/ukulele.png" alt="尤克里里图标"><figcaption>尤克里里</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/mandolin.png" alt="曼陀林图标"><figcaption>曼陀林</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/banjo.png" alt="班卓图标"><figcaption>班卓</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/violin.png" alt="小提琴图标"><figcaption>小提琴</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/viola.png" alt="中提琴图标"><figcaption>中提琴</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/cello.png" alt="大提琴图标"><figcaption>大提琴</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/erhu.png" alt="二胡图标"><figcaption>二胡</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/pipa.png" alt="琵琶图标"><figcaption>琵琶</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/guzheng.png" alt="古筝图标"><figcaption>古筝</figcaption></figure>
+  <figure><img src="../assets/img/greentune-icons/guqin.png" alt="古琴图标"><figcaption>古琴</figcaption></figure>
+</div>

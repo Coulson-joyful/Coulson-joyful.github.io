@@ -72,6 +72,17 @@
 .post__content th,
 .post__content td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
 
-/* GreenTune 文章末尾的应用图标 */
-.post__content .greentune-icon { text-align: center; }
-.post__content .greentune-icon img { width: min(220px, 55vw); margin: 0; }
+/* GreenTune 文章末尾的乐器图标 */
+.post__content .greentune-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-3) 0;
+}
+.post__content .greentune-icon-grid figure { margin: 0; text-align: center; }
+.post__content .greentune-icon-grid img {
+  width: min(88px, 100%);
+  margin: 0 auto var(--space-1);
+  display: block;
+}
+.post__content .greentune-icon-grid figcaption { color: var(--text-secondary); font-size: 14px; }
