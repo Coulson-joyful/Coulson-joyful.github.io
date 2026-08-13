@@ -21,13 +21,6 @@
     "tags": ["网络", "OpenClash", "旁路由", "路由器"]
   },
   {
-    "slug": "2026-07-imessage-remote-claude",
-    "title": "用 iMessage 双向遥控 Mac 上的 Claude Code",
-    "date": "2026-07-29",
-    "summary": "不开公网、不装服务端,用一个自聊 iMessage 会话把手机变成 Claude Code 的遥控器。附三个反直觉的 macOS 踩坑:薛定谔的 is_from_me、被 TCC 挡住的 fswatch、launchd 的 FDA 责任进程。",
-    "tags": ["自动化", "iMessage", "Claude", "macOS"]
-  },
-  {
     "slug": "2026-07-hello-world",
     "title": "Hello World —— 这个博客是怎么搭起来的",
     "date": "2026-07-29",
