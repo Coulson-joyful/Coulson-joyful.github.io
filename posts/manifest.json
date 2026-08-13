@@ -8,10 +8,10 @@
   },
   {
     "slug": "2026-08-greentune-tuner",
-    "title": "造一个「绿色」调音器:零依赖、2 MB,从吉他到古筝 12 种乐器",
-    "date": "2026-08-07",
-    "summary": "因为喜欢音乐,自己写了个调音器 + 节拍器:纯 Apple 框架、零第三方,声音和图标全程序化生成,真机装下才 ~2 MB,内置 24 种语言。记 YIN 防乱跳状态机、@Published 递归崩溃、Menu 被高频刷新冲掉→改 popover 三个坑,从吉他到古筝 21 弦的全品类乐器,大屏双列布局的演进(从 horizontalSizeClass 到基于宽度、让 iPad 和 Mac 一起吃上双列),以及把同一套引擎搬上 Apple Watch、用 Taptic 触觉在手腕上打拍。",
-    "tags": ["Swift", "SwiftUI", "iOS", "iPad", "macOS", "watchOS", "个人作品"]
+    "title": "从一把走音的吉他开始：我的第一个 AI 开发 App，GreenTune",
+    "date": "2026-08-13",
+    "summary": "因为不想在调音时面对广告与复杂功能，我借助 AI 做了 GreenTune：从吉他调音器出发，逐步加入多乐器调音、节拍器、灵动岛与锁屏控制；也在思考如何在不影响基础体验的前提下，让这个为爱发电的小项目持续下去。",
+    "tags": ["AI 学习", "Vibe Coding", "SwiftUI", "iOS", "音乐", "个人作品"]
   },
   {
     "slug": "2026-08-openclash-side-router",

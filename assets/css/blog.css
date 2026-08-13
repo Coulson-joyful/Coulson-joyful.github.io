@@ -71,3 +71,7 @@
 .post__content table { width: 100%; border-collapse: collapse; margin: 0 0 var(--space-3); }
 .post__content th,
 .post__content td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
+
+/* GreenTune 文章末尾的应用图标 */
+.post__content .greentune-icon { text-align: center; }
+.post__content .greentune-icon img { width: min(220px, 55vw); margin: 0; }
