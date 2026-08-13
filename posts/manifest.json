@@ -3,7 +3,7 @@
     "slug": "2026-08-imessage-ai-notify",
     "title": "AI 在工作时,我不再守在电脑前:用 iMessage 接住完成提醒",
     "date": "2026-08-13",
-    "summary": "刚开始用 Codex 和 Claude Code 时，我最不习惯的是提交任务后的等待。于是用自己的 iMessage 会话接住任务完成通知，让 iPhone 和 Apple Watch 在 AI 做完事时提醒我：我不用再守在电脑前，可以先去处理其他事情，再根据提醒回来查看结果。",
+    "summary": "把 AI 任务完成通知接入自己的 iMessage 会话，让 iPhone 和 Apple Watch 在 Codex 或 Claude Code 完成工作时提醒我；不用守在电脑前，随时回来查看结果。",
     "tags": ["AI 学习", "Vibe Coding", "iMessage", "自动化", "macOS"]
   },
   {
