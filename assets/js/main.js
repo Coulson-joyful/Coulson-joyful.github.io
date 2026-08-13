@@ -242,7 +242,7 @@ function renderProjects() {
 /* ---------- 博客预览:只 fetch,取最新 3 篇 ---------- */
 async function fetchPosts() {
   try {
-    const posts = await fetch("posts/manifest.json").then((r) => {
+    const posts = await fetch("posts/manifest.json", { cache: "no-store" }).then((r) => {
       if (!r.ok) throw new Error("no manifest");
       return r.json();
     });

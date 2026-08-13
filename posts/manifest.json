@@ -10,7 +10,7 @@
     "slug": "2026-08-greentune-tuner",
     "title": "从一把走音的吉他开始，做了 GreenTune",
     "date": "2026-08-13",
-    "summary": "一把走音的老吉他，让我借助 AI 做了第一个 App：GreenTune。它从吉他调音器出发，逐步加入多乐器调音与节拍练习，希望把注意力重新带回音乐本身。",
+    "summary": "GreenTune 是我借助 AI 做出的第一个 App：从一把走音的老吉他出发，做成了面向日常练习的多乐器调音器和节拍器；我希望它保持简单、无广告，把注意力重新带回音乐本身。",
     "tags": ["AI 创作", "Vibe Coding", "SwiftUI", "iOS", "音乐", "个人作品"]
   },
   {

@@ -27,7 +27,7 @@ const state = { posts: [], slug: null };
 
 /* ---------- 加载 manifest ---------- */
 async function loadManifest() {
-  const res = await fetch("../posts/manifest.json");
+  const res = await fetch("../posts/manifest.json", { cache: "no-store" });
   if (!res.ok) throw new Error("manifest 加载失败");
   const posts = await res.json();
   return [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
