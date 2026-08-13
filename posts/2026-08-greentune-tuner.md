@@ -46,7 +46,7 @@
 <table class="greentune-icon-table">
   <tbody>
     <tr>
-      <td align="center"><img src="../assets/img/greentune-app-icon.png" alt="GreenTune 基础版图标" width="88" height="88"><br>GreenTune 基础版</td>
+      <td align="center"><img src="../assets/img/greentune-app-icon.png" alt="GreenTune 基础版图标" width="88" height="88"><br>GreenTune</td>
       <td align="center"><img src="../assets/img/greentune-icons/guitar.png" alt="吉他图标" width="88" height="88"><br>吉他</td>
       <td align="center"><img src="../assets/img/greentune-icons/bass.png" alt="贝斯图标" width="88" height="88"><br>贝斯</td>
       <td align="center"><img src="../assets/img/greentune-icons/ukulele.png" alt="尤克里里图标" width="88" height="88"><br>尤克里里</td>
