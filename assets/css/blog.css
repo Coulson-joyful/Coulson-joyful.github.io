@@ -79,10 +79,13 @@
   gap: var(--space-3);
   margin: var(--space-3) 0;
 }
-.post__content .greentune-icon-grid figure { margin: 0; text-align: center; }
+.post__content .greentune-icon-grid figure { width: 88px; margin: 0 auto; text-align: center; }
 .post__content .greentune-icon-grid img {
-  width: min(88px, 100%);
+  width: 88px;
+  height: 88px;
   margin: 0 auto var(--space-1);
   display: block;
+  object-fit: cover;
+  border-radius: 22.5%;
 }
 .post__content .greentune-icon-grid figcaption { color: var(--text-secondary); font-size: 14px; }
