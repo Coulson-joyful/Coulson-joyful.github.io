@@ -41,7 +41,7 @@
 
 ## GreenTune 乐器图标
 
-下面是 GreenTune 为不同乐器准备的图标。**所有图标均由 ChatGPT 生成**。
+下面是 GreenTune 为不同乐器准备的图标。**所有图标均由 ChatGPT 生成**；班卓琴图标已更新为与 App 内一致的立体设计。
 
 <table class="greentune-icon-table">
   <tbody>
