@@ -167,18 +167,27 @@ function projectCard({ name, desc, url, tags = [], stars }) {
     </a>`;
 }
 
-/* ---------- GitHub 项目拉取(只 fetch,不渲染;失败返回 null 降级) ---------- */
+/* ---------- GitHub 项目拉取(只 fetch,不渲染;展示全部公开项目) ---------- */
 async function fetchRepos(p) {
   if (!p.githubUser) return null;
   try {
-    const res = await fetch(
-      `https://api.github.com/users/${encodeURIComponent(
-        p.githubUser
-      )}/repos?per_page=100&sort=updated`
-    );
-    if (!res.ok) throw new Error(`GitHub API ${res.status}`);
-    const repos = await res.json();
-    if (!Array.isArray(repos)) throw new Error("bad payload");
+    let url = `https://api.github.com/users/${encodeURIComponent(
+      p.githubUser
+    )}/repos?per_page=100&sort=updated`;
+    const repos = [];
+
+    // GitHub 每页最多返回 100 个仓库；继续跟随 next 链接，确保不遗漏。
+    while (url) {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`GitHub API ${res.status}`);
+      const page = await res.json();
+      if (!Array.isArray(page)) throw new Error("bad payload");
+      repos.push(...page);
+      const next = (res.headers.get("Link") || "").match(
+        /<([^>]+)>; rel="next"/
+      );
+      url = next ? next[1] : null;
+    }
 
     return repos
       .filter((r) => !r.fork && !r.archived)
@@ -186,8 +195,7 @@ async function fetchRepos(p) {
         (a, b) =>
           b.stargazers_count - a.stargazers_count ||
           new Date(b.updated_at) - new Date(a.updated_at)
-      )
-      .slice(0, 6);
+      );
   } catch (err) {
     console.warn("GitHub 拉取失败,降级为精选项目:", err);
     return null;
