@@ -192,6 +192,7 @@ img { max-width: 100%; display: block; }
 .section__head .section__title { margin: 0; }
 .section__lead { font-size: 19px; color: var(--text-secondary); max-width: 680px; margin: 0 0 var(--space-4); }
 .section__hint { font-size: 14px; color: var(--text-secondary); }
+.projects-page { padding-top: var(--space-5); padding-bottom: var(--space-5); min-height: 60vh; }
 
 /* ---------- 时间线 / 简历 ---------- */
 .timeline { display: flex; flex-direction: column; gap: var(--space-2); }

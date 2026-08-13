@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>全部项目 · Coulson</title>
+  <meta name="description" content="Coulson 的全部公开 GitHub 项目。" />
+  <meta name="theme-color" content="#f5f5f7" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="../">← Coulson-joyful</a>
+      <nav class="nav__links" aria-label="主导航">
+        <a href="./" data-i18n="nav_projects">作品</a>
+        <a href="../blog/" data-i18n="nav_blog">博客</a>
+        <a href="../#links" data-i18n="nav_links">链接</a>
+      </nav>
+      <div id="langSwitch" class="lang-switch" role="group" aria-label="语言 / Language"></div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色 / 浅色模式" data-i18n-attr="aria-label:aria_theme">
+        <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container projects-page">
+    <section>
+      <div class="section__head">
+        <h1 class="section__title" data-i18n="projects_title">全部项目</h1>
+        <a class="section__hint link" id="githubProfile" href="https://github.com/Coulson-joyful" target="_blank" rel="noopener" data-i18n="github_profile">在 GitHub 查看全部 →</a>
+      </div>
+      <p class="section__lead" data-i18n="projects_lead">所有可公开读取的 GitHub 项目，按 Star 数与最近更新时间排序。</p>
+      <div class="cards-grid" id="projectList">
+        <p class="muted" data-i18n="loading">加载中…</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>© <span id="year"></span> Coulson. Built with plain HTML/CSS/JS.</p></div>
+  </footer>
+
+  <script src="../assets/js/i18n.js" defer></script>
+  <script src="../assets/js/projects.js" defer></script>
+</body>
+</html>

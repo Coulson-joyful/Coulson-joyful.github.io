@@ -8,9 +8,10 @@ Coulson 的个人主页 —— **开发者作品集 + 简历名片 + 博客 + �
 ```
 ├── index.html            # 单页主页:Hero → 简历 → 技能 → 作品 → 博客预览 → 链接
 ├── blog/index.html       # 博客列表 / 文章视图
+├── projects/index.html   # 全部公开 GitHub 项目列表
 ├── posts/                # 文章 md + manifest.json 索引
 ├── assets/css/           # style.css(全站) + blog.css(文章排版)
-├── assets/js/            # main.js(主页) + blog.js(博客)
+├── assets/js/            # main.js(主页) + blog.js(博客) + projects.js(项目列表)
 ├── assets/img/           # 头像等资源
 ├── data/profile.json     # ★ 日常只改这个文件:个人信息 / 技能 / 精选项目 / 链接
 ├── favicon.svg / 404.html / robots.txt
@@ -29,7 +30,7 @@ python3 -m http.server 8080
 ## 更新内容
 
 - **改个人信息 / 技能 / 精选项目 / 链接**:只编辑 `data/profile.json`,不用碰 HTML。
-- **作品区**:自动从 `https://api.github.com/users/Coulson-joyful/repos` 拉公开仓库(按 star / 更新时间排序,取前 6);拉取失败时自动降级为 `profile.json` 里的 `featuredProjects`。
+- **作品区**:主页和“全部项目”页都会自动从 `https://api.github.com/users/Coulson-joyful/repos` 拉取全部公开、非归档、非 fork 的仓库；拉取失败时主页降级为 `profile.json` 里的 `featuredProjects`。
 
 ## 新增一篇博客
 

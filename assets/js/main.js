@@ -208,7 +208,6 @@ function renderProjects() {
   if (!p) return;
   const lang = i18n.getLang();
   const grid = $("#projectsGrid");
-  const hint = $("#projectsHint");
   const featured = p.featuredProjects || [];
 
   const featuredCards = () =>
@@ -237,10 +236,8 @@ function renderProjects() {
         })
       )
       .join("");
-    hint.textContent = i18n.t("hint_github", lang);
     grid.innerHTML = featuredCards() + apiCards;
   } else {
-    hint.textContent = i18n.t("hint_featured", lang);
     grid.innerHTML = featured.length
       ? featuredCards()
       : `<p class="muted">${i18n.t("no_projects", lang)}</p>`;

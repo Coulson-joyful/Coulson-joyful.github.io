@@ -24,6 +24,7 @@
     nav_blog: { zh: "博客", ja: "ブログ", en: "Blog" },
     nav_links: { zh: "链接", ja: "リンク", en: "Links" },
     blog_all: { zh: "全部文章 →", ja: "すべての記事 →", en: "All posts →" },
+    projects_all: { zh: "全部项目 →", ja: "すべてのプロジェクト →", en: "All projects →" },
 
     // CTA
     cta_work: { zh: "看看作品", ja: "作品を見る", en: "See my work" },
@@ -63,6 +64,11 @@
       ja: "ブログの読み込みに失敗しました。",
       en: "Failed to load blog.",
     },
+    projects_load_failed: {
+      zh: "项目加载失败，请前往 GitHub 查看全部公开项目。",
+      ja: "プロジェクトを読み込めませんでした。GitHub で公開プロジェクトをご覧ください。",
+      en: "Couldn't load projects. View all public projects on GitHub.",
+    },
     post_not_found: {
       zh: "找不到这篇文章。",
       ja: "この記事は見つかりません。",
@@ -96,6 +102,13 @@
       ja: "思いつくままに —— サイト作り、ツール、いじり倒した記録。",
       en: "Whatever comes to mind — site-building, tools, tinkering notes.",
     },
+    projects_title: { zh: "全部项目", ja: "すべてのプロジェクト", en: "All projects" },
+    projects_lead: {
+      zh: "所有可公开读取的 GitHub 项目，按 Star 数与最近更新时间排序。",
+      ja: "公開されているすべての GitHub プロジェクト。Star 数と最終更新日順です。",
+      en: "All publicly readable GitHub projects, ordered by stars and recent updates.",
+    },
+    github_profile: { zh: "在 GitHub 查看全部 →", ja: "GitHub ですべて見る →", en: "View all on GitHub →" },
   };
 
   /* ---------- 语言读写 ---------- */
