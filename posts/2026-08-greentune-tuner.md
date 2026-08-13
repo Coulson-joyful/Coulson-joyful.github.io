@@ -43,18 +43,29 @@
 
 下面是 GreenTune 为不同乐器准备的图标。**所有图标均由 ChatGPT 生成**。
 
-<div class="greentune-icon-grid">
-  <figure><img src="../assets/img/greentune-app-icon.png" alt="GreenTune 基础版图标" width="88" height="88"><figcaption>GreenTune 基础版</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/guitar.png" alt="吉他图标" width="88" height="88"><figcaption>吉他</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/bass.png" alt="贝斯图标" width="88" height="88"><figcaption>贝斯</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/ukulele.png" alt="尤克里里图标" width="88" height="88"><figcaption>尤克里里</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/mandolin.png" alt="曼陀林图标" width="88" height="88"><figcaption>曼陀林</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/banjo.png" alt="班卓图标" width="88" height="88"><figcaption>班卓</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/violin.png" alt="小提琴图标" width="88" height="88"><figcaption>小提琴</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/viola.png" alt="中提琴图标" width="88" height="88"><figcaption>中提琴</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/cello.png" alt="大提琴图标" width="88" height="88"><figcaption>大提琴</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/erhu.png" alt="二胡图标" width="88" height="88"><figcaption>二胡</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/pipa.png" alt="琵琶图标" width="88" height="88"><figcaption>琵琶</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/guzheng.png" alt="古筝图标" width="88" height="88"><figcaption>古筝</figcaption></figure>
-  <figure><img src="../assets/img/greentune-icons/guqin.png" alt="古琴图标" width="88" height="88"><figcaption>古琴</figcaption></figure>
-</div>
+<table class="greentune-icon-table">
+  <tbody>
+    <tr>
+      <td align="center"><img src="../assets/img/greentune-app-icon.png" alt="GreenTune 基础版图标" width="88" height="88"><br>GreenTune 基础版</td>
+      <td align="center"><img src="../assets/img/greentune-icons/guitar.png" alt="吉他图标" width="88" height="88"><br>吉他</td>
+      <td align="center"><img src="../assets/img/greentune-icons/bass.png" alt="贝斯图标" width="88" height="88"><br>贝斯</td>
+      <td align="center"><img src="../assets/img/greentune-icons/ukulele.png" alt="尤克里里图标" width="88" height="88"><br>尤克里里</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="../assets/img/greentune-icons/mandolin.png" alt="曼陀林图标" width="88" height="88"><br>曼陀林</td>
+      <td align="center"><img src="../assets/img/greentune-icons/banjo.png" alt="班卓图标" width="88" height="88"><br>班卓</td>
+      <td align="center"><img src="../assets/img/greentune-icons/violin.png" alt="小提琴图标" width="88" height="88"><br>小提琴</td>
+      <td align="center"><img src="../assets/img/greentune-icons/viola.png" alt="中提琴图标" width="88" height="88"><br>中提琴</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="../assets/img/greentune-icons/cello.png" alt="大提琴图标" width="88" height="88"><br>大提琴</td>
+      <td align="center"><img src="../assets/img/greentune-icons/erhu.png" alt="二胡图标" width="88" height="88"><br>二胡</td>
+      <td align="center"><img src="../assets/img/greentune-icons/pipa.png" alt="琵琶图标" width="88" height="88"><br>琵琶</td>
+      <td align="center"><img src="../assets/img/greentune-icons/guzheng.png" alt="古筝图标" width="88" height="88"><br>古筝</td>
+    </tr>
+    <tr>
+      <td align="center"><img src="../assets/img/greentune-icons/guqin.png" alt="古琴图标" width="88" height="88"><br>古琴</td>
+      <td></td><td></td><td></td>
+    </tr>
+  </tbody>
+</table>
