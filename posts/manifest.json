@@ -1,5 +1,12 @@
 [
   {
+    "slug": "2026-08-imessage-ai-notify",
+    "title": "AI 在工作时,我不再守在电脑前:用 iMessage 接住完成提醒",
+    "date": "2026-08-13",
+    "summary": "刚开始用 Codex 和 Claude Code 时,我最不习惯的是提交任务后的等待。于是用自己的 iMessage 会话接住任务完成通知,让 iPhone 和 Apple Watch 在 AI 做完事时提醒我;两个工具先分别接入,等更熟悉后再统一。",
+    "tags": ["AI 学习", "Vibe Coding", "iMessage", "自动化", "macOS"]
+  },
+  {
     "slug": "2026-08-greentune-tuner",
     "title": "造一个「绿色」调音器:零依赖、2 MB,从吉他到古筝 12 种乐器",
     "date": "2026-08-07",
