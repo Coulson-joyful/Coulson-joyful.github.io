@@ -1,69 +1,70 @@
-# Coulson-joyful.github.io
+# Coulson 的个人主页
 
-Coulson 的个人主页 —— **开发者作品集 + 简历名片 + 博客 + 链接聚合**。
-纯静态 HTML / CSS / JS,零构建、零依赖(仅博客用 CDN 版 marked.js),托管于 GitHub Pages。
+[打开网站](https://coulson-joyful.github.io)
 
-## 目录结构
+这里放我的个人介绍、做过的项目、博客和常用链接。网站是静态 HTML、CSS 和 JavaScript，没有构建步骤；博客用 CDN 版 marked.js 渲染 Markdown。
 
-```
-├── index.html            # 单页主页:Hero → 简历 → 技能 → 作品 → 博客预览 → 链接
-├── blog/index.html       # 博客列表 / 文章视图
-├── projects/index.html   # 全部公开 GitHub 项目列表
-├── posts/                # 文章 md + manifest.json 索引
-├── assets/css/           # style.css(全站) + blog.css(文章排版)
-├── assets/js/            # main.js(主页) + blog.js(博客) + projects.js(项目列表)
-├── assets/img/           # 头像等资源
-├── data/profile.json     # ★ 日常只改这个文件:个人信息 / 技能 / 精选项目 / 链接
-├── favicon.svg / 404.html / robots.txt
-```
+## 在本机看效果
 
-## 本地预览
+在仓库根目录运行：
 
 ```bash
-cd ~/Developer/Coulson-joyful.github.io
 python3 -m http.server 8080
-# 打开 http://localhost:8080
 ```
 
-> 必须用本地服务器打开(不能直接 `file://`),否则 `fetch` JSON / md 会被浏览器拦截。
+然后打开 `http://localhost:8080`。不要直接双击 HTML：页面需要用 `fetch` 读取 JSON 和文章，`file://` 打开会受到浏览器限制。
 
-## 更新内容
+## 平时改哪里
 
-- **改个人信息 / 技能 / 精选项目 / 链接**:只编辑 `data/profile.json`,不用碰 HTML。
-- **作品区**:主页和“全部项目”页都会自动从 `https://api.github.com/users/Coulson-joyful/repos` 拉取全部公开、非归档、非 fork 的仓库；拉取失败时主页降级为 `profile.json` 里的 `featuredProjects`。
+个人介绍、技能、精选项目和链接在 `data/profile.json`，一般不用改 HTML。
 
-## 新增一篇博客
+主页作品区和“全部项目”页会从 `https://api.github.com/users/Coulson-joyful/repos` 获取公开、未归档、非 fork 仓库。获取失败时，主页使用 `profile.json` 里的 `featuredProjects`。这里不会展示私有仓库。
+
+写博客需要两步：
 
 1. 在 `posts/` 新建 `YYYY-MM-slug.md`。
-2. 在 `posts/manifest.json` 顶部加一条索引:
+2. 在 `posts/manifest.json` 顶部加入索引，再提交并推送。
 
-   ```json
-   {
-     "slug": "YYYY-MM-slug",
-     "title": "标题",
-     "date": "YYYY-MM-DD",
-     "summary": "一句话摘要",
-     "tags": ["标签"]
-   }
-   ```
-
-3. 提交并推送。
-
-## 部署(GitHub Pages)
-
-仓库必须建在 **Coulson-joyful** 名下,仓库名必须是 `Coulson-joyful.github.io`。
-
-```bash
-git init && git add -A && git commit -m "init: personal site"
-git branch -M main
-git remote add origin git@github.com:Coulson-joyful/Coulson-joyful.github.io.git
-git push -u origin main
+```json
+{
+  "slug": "YYYY-MM-slug",
+  "title": "标题",
+  "date": "YYYY-MM-DD",
+  "summary": "一句话摘要",
+  "tags": ["标签"]
+}
 ```
 
-然后仓库 **Settings → Pages → Source = `main` 分支根目录**,几分钟后 `https://coulson-joyful.github.io` 生效。
+## 文件位置
 
-> 账号:GitHub 账号为 **Coulson-joyful**,SSH 密钥(`~/.ssh/id_ed25519`)已绑定该账号,`gh` CLI 也是该账号;用户站 Pages 会在推送到 `main` 后自动发布。
+```text
+index.html          主页：介绍、简历、技能、作品、博客预览和链接
+blog/index.html     博客列表和文章
+projects/index.html 全部公开项目
+posts/              Markdown 文章和 manifest.json
+assets/css/         全站样式和文章样式
+assets/js/          主页、博客和项目列表脚本
+assets/img/         头像等图片
+data/profile.json   个人信息和精选内容
+tarot/              星语塔罗的公开隐私、支持和来源说明
+favicon.svg         网站图标
+404.html            未找到页面
+robots.txt          爬虫规则
+```
 
-## 自定义域名(可选)
+## 发布
 
-在仓库根目录添加 `CNAME` 文件(内容为你的域名),并在域名服务商处配置 DNS 指向 GitHub Pages。
+这个用户站的仓库是 `Coulson-joyful/Coulson-joyful.github.io`，默认分支为 `main`。GitHub Pages 使用 `main` 的根目录作为发布来源。修改后正常提交、推送，等待 Pages 构建完成，再看线上效果。
+
+如果是在新机器上接着维护：
+
+```bash
+git clone git@github.com:Coulson-joyful/Coulson-joyful.github.io.git
+cd Coulson-joyful.github.io
+```
+
+不需要重新 `git init` 或重设已有仓库。SSH 密钥和 `gh` 登录状态属于本机配置，换机器后要单独确认。
+
+如果以后使用自定义域名，在根目录添加 `CNAME`，并在域名服务商处配置 GitHub Pages 所需的 DNS。
+
+公开支持页面应与 App 的实际行为一致。尤其是 `tarot/` 下的隐私、购买和数据说明，不要只改开发工程里的备份。
