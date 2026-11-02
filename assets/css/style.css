@@ -295,3 +295,12 @@ img { max-width: 100%; display: block; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Homepage product guides remain visible without JavaScript or the GitHub API. */
+#about { scroll-margin-top: 90px; }
+.app-showcase { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
+.app-showcase .card { padding: var(--space-4); }
+.app-showcase .card__title { font-size: 28px; }
+.app-showcase .card__desc { font-size: 17px; line-height: 1.8; margin-bottom: var(--space-3); }
+.app-showcase .btn { align-self: flex-start; }
+@media (max-width: 640px) { .app-showcase { grid-template-columns: 1fr; } }

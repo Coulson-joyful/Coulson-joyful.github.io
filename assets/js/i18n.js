@@ -19,6 +19,13 @@
 
   /* ---------- 界面文案字典(静态标签 + JS 动态串) ---------- */
   const UI = {
+    nav_apps: { zh: "App 作品", ja: "アプリ", en: "My apps" },
+    apps_intro: { zh: "我正在开发的两个 Apple App。直接查看产品介绍与使用说明。", ja: "開発中の2つの Apple アプリ。製品紹介と使い方を直接ご覧いただけます。", en: "Two Apple apps I’m building. Explore their features and user guides." },
+    apps_status: { zh: "开发版本 · 上架准备中", ja: "開発版 · 公開準備中", en: "In development · Preparing for release" },
+    tarot_intro: { zh: "每日一牌、牌阵、占星骰与一页回应。了解如何开始一次阅读，浏览设备界面和四套主题牌面。", ja: "毎日のカード、タロットスプレッド、占星術ダイスと振り返り。使い方、画面、4種類のカードをご紹介。", en: "Daily cards, tarot spreads, astrology dice and reflection. Learn how to start a reading and explore the screens and four decks." },
+    greentune_intro: { zh: "调音器与节拍器。从逐弦调音到节奏、重音和变速练习，了解 iPhone、iPad、Mac 与 Apple Watch 上的使用方式。", ja: "チューナーとメトロノーム。調弦、アクセント、テンポ練習を iPhone、iPad、Mac、Apple Watch で。", en: "A tuner and metronome. Learn tuning, accents and tempo training on iPhone, iPad, Mac and Apple Watch." },
+    tarot_guide: { zh: "查看星语塔罗使用说明 →", ja: "星语塔罗のガイドを見る →", en: "Read the Tarot guide →" },
+    greentune_guide: { zh: "查看 GreenTune 使用说明 →", ja: "GreenTune のガイドを見る →", en: "Read the GreenTune guide →" },
     // 导航 / 区块标题
     nav_projects: { zh: "作品", ja: "作品", en: "Work" },
     nav_blog: { zh: "博客", ja: "ブログ", en: "Blog" },
