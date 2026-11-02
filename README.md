@@ -68,10 +68,3 @@ cd Coulson-joyful.github.io
 如果以后使用自定义域名，在根目录添加 `CNAME`，并在域名服务商处配置 GitHub Pages 所需的 DNS。
 
 公开支持页面应与 App 的实际行为一致。尤其是 `tarot/` 下的隐私、购买和数据说明，不要只改开发工程里的备份。
-
-## App 产品展示
-
-- [星语塔罗 · 产品与使用手册](https://coulson-joyful.github.io/apps/tarot/)
-- [GreenTune · 产品与使用说明](https://coulson-joyful.github.io/apps/greentune/)
-
-页面位于 `apps/`，仅发布公开产品文档和必要图片。两个 App 的源码工程保持私有。页面标注开发版本状态，不代表已上架。

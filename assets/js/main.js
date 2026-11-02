@@ -208,9 +208,7 @@ function renderProjects() {
   if (!p) return;
   const lang = i18n.getLang();
   const grid = $("#projectsGrid");
-  const featured = (p.featuredProjects || []).filter((project) =>
-    !project.url?.startsWith("https://coulson-joyful.github.io/apps/")
-  );
+  const featured = p.featuredProjects || [];
 
   const featuredCards = () =>
     featured
