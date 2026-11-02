@@ -263,6 +263,7 @@ async function fetchPosts() {
 /* ---------- 渲染博客预览(卡片标题/摘要来自 manifest,保持中文原样) ---------- */
 function renderBlogPreview() {
   const grid = $("#blogGrid");
+  if (!grid) return;
   const lang = i18n.getLang();
   if (state.posts === null) {
     grid.innerHTML = `<p class="muted">${i18n.t("blog_unavailable", lang)}</p>`;

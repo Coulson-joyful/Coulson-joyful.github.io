@@ -21,6 +21,32 @@
   "githubUser": "Coulson-joyful",
   "featuredProjects": [
     {
+      "name": "星语塔罗",
+      "desc": {
+        "zh": "每日一牌、牌阵、占星骰与一页回应。浏览界面、主题牌面和使用说明（开发版本）。",
+        "ja": "タロット、占星術ダイスと振り返り。画面・カード・使い方を紹介（開発版）。",
+        "en": "Tarot readings, astrology dice and reflection. Explore screens, decks and the user guide (in development)."
+      },
+      "url": "https://coulson-joyful.github.io/apps/tarot/",
+      "tags": [
+        "App",
+        "产品说明"
+      ]
+    },
+    {
+      "name": "GreenTune",
+      "desc": {
+        "zh": "调音器与节拍器：从逐弦调音到变速练习，了解各设备上的使用方式（开发版本）。",
+        "ja": "チューナーとメトロノーム。調弦からテンポ練習までの使い方（開発版）。",
+        "en": "Tuner and metronome: learn tuning, tempo training and device-specific controls (in development)."
+      },
+      "url": "https://coulson-joyful.github.io/apps/greentune/",
+      "tags": [
+        "App",
+        "使用说明"
+      ]
+    },
+    {
       "name": "claude-iMessage-notify",
       "desc": {
         "zh": "让 Claude 通过 iMessage 把任务结果 / 完成通知推送回手机的自动化脚本。",
