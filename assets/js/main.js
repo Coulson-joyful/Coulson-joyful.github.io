@@ -305,7 +305,7 @@ async function init() {
   window.addEventListener("langchange", renderAll);
 
   try {
-    state.profile = await fetch("data/profile.json").then((r) => {
+    state.profile = await fetch("data/profile.json", { cache: "no-store" }).then((r) => {
       if (!r.ok) throw new Error("no profile.json");
       return r.json();
     });
