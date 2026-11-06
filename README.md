@@ -46,7 +46,7 @@ assets/css/         全站样式和文章样式
 assets/js/          主页、博客和项目列表脚本
 assets/img/         头像等图片
 data/profile.json   个人信息和精选内容
-tarot/              星语塔罗的公开隐私、支持和来源说明
+tarot/              星谕塔罗的公开隐私、支持和来源说明
 favicon.svg         网站图标
 404.html            未找到页面
 robots.txt          爬虫规则
