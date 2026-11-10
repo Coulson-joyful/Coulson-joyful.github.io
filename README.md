@@ -41,6 +41,7 @@ python3 -m http.server 8080
 index.html          主页：介绍、简历、技能、作品、博客预览和链接
 blog/index.html     博客列表和文章
 projects/index.html 全部公开项目
+other/              其他：脱敏测试报告与实验记录
 posts/              Markdown 文章和 manifest.json
 assets/css/         全站样式和文章样式
 assets/js/          主页、博客和项目列表脚本
@@ -68,3 +69,5 @@ cd Coulson-joyful.github.io
 如果以后使用自定义域名，在根目录添加 `CNAME`，并在域名服务商处配置 GitHub Pages 所需的 DNS。
 
 公开支持页面应与 App 的实际行为一致。尤其是 `tarot/` 下的隐私、购买和数据说明，不要只改开发工程里的备份。
+
+“其他”分类目前收录 [Siri AI 公开接口真机测试报告](other/siri-ai-api-report.html)，正文采用脱敏发布版。后续报告可放入 `other/` 并在首页对应区块添加入口。

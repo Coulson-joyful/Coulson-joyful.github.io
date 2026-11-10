@@ -23,6 +23,17 @@
     nav_projects: { zh: "作品", ja: "作品", en: "Work" },
     nav_blog: { zh: "博客", ja: "ブログ", en: "Blog" },
     nav_links: { zh: "链接", ja: "リンク", en: "Links" },
+    nav_other: { zh: "其他", ja: "その他", en: "Other" },
+    other_hint: { zh: "报告与实验记录", ja: "レポートと実験記録", en: "Reports and experiments" },
+    report_anonymized: { zh: "已脱敏", ja: "匿名化済み", en: "Anonymized" },
+    siri_report_title: { zh: "Siri AI 公开接口真机测试报告", ja: "Siri AI 公開 API の実機テストレポート", en: "Siri AI Public API Device Test Report" },
+    siri_report_desc: {
+      zh: "国行 iPhone 16 Pro / iOS 27.3 的独立测试：区分 Siri 快捷操作、写作工具、端侧模型与 PCC 的实际结果，以及地区、权限和 SDK 限制。",
+      ja: "中国本土向け iPhone 16 Pro / iOS 27.3 での独立テスト。Siri ショートカット、作文ツール、オンデバイスモデル、PCC の結果と、地域・権限・SDK の制約を整理しています。",
+      en: "Independent testing on a mainland China iPhone 16 Pro with iOS 27.3, separating observed Siri Shortcut, Writing Tools, on-device model and PCC results from regional, entitlement and SDK limits."
+    },
+    report_read: { zh: "阅读报告 →", ja: "レポートを読む（中国語）→", en: "Read report (Chinese) →" },
+    report_source: { zh: "工具与证据 ↗", ja: "ツールと検証記録 ↗", en: "Tool and evidence ↗" },
     blog_all: { zh: "全部文章 →", ja: "すべての記事 →", en: "All posts →" },
     projects_all: { zh: "全部项目 →", ja: "すべてのプロジェクト →", en: "All projects →" },
 
