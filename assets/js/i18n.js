@@ -26,11 +26,11 @@
     nav_other: { zh: "其他", ja: "その他", en: "Other" },
     other_hint: { zh: "报告与实验记录", ja: "レポートと実験記録", en: "Reports and experiments" },
     report_anonymized: { zh: "已脱敏", ja: "匿名化済み", en: "Anonymized" },
-    siri_report_title: { zh: "Siri AI 公开接口真机测试报告", ja: "Siri AI 公開 API の実機テストレポート", en: "Siri AI Public API Device Test Report" },
+    siri_report_title: { zh: "Siri AI：用户功能、开发接口与中国大陆限制", ja: "Siri AI：利用者向け機能・開発 API・中国本土の制限", en: "Siri AI: User Features, Developer APIs and Mainland China Limits" },
     siri_report_desc: {
-      zh: "国行 iPhone 16 Pro / iOS 27.3 的独立测试：区分 Siri 快捷操作、写作工具、端侧模型与 PCC 的实际结果，以及地区、权限和 SDK 限制。",
-      ja: "中国本土向け iPhone 16 Pro / iOS 27.3 での独立テスト。Siri ショートカット、作文ツール、オンデバイスモデル、PCC の結果と、地域・権限・SDK の制約を整理しています。",
-      en: "Independent testing on a mainland China iPhone 16 Pro with iOS 27.3, separating observed Siri Shortcut, Writing Tools, on-device model and PCC results from regional, entitlement and SDK limits."
+      zh: "用 Xcode 27.3 在国行 iPhone 16 Pro 上重测。分三类说明：用户怎么用、开发者怎么接、哪些受到中国大陆地区条件限制。",
+      ja: "Xcode 27.3 と中国本土向け iPhone 16 Pro で再テスト。利用者が使う機能、開発者が呼び出す API、中国本土の地域条件を分けて説明します。",
+      en: "Retested with Xcode 27.3 on a mainland China iPhone 16 Pro. Three sections explain user features, developer APIs, and mainland China availability conditions."
     },
     report_read: { zh: "阅读报告 →", ja: "レポートを読む（中国語）→", en: "Read report (Chinese) →" },
     report_source: { zh: "工具与证据 ↗", ja: "ツールと検証記録 ↗", en: "Tool and evidence ↗" },
