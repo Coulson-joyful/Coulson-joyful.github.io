@@ -26,11 +26,11 @@
     nav_other: { zh: "其他", ja: "その他", en: "Other" },
     other_hint: { zh: "报告与实验记录", ja: "レポートと実験記録", en: "Reports and experiments" },
     report_anonymized: { zh: "已脱敏", ja: "匿名化済み", en: "Anonymized" },
-    siri_report_title: { zh: "Siri AI：用户功能、开发接口与中国大陆限制", ja: "Siri AI：利用者向け機能・開発 API・中国本土の制限", en: "Siri AI: User Features, Developer APIs and Mainland China Limits" },
+    siri_report_title: { zh: "Apple Intelligence：真机与模拟器开放情况", ja: "Apple Intelligence：実機・シミュレータでの利用可否", en: "Apple Intelligence: Device and Simulator Availability" },
     siri_report_desc: {
-      zh: "用 Xcode 27.3 在国行 iPhone 16 Pro 上重测。分三类说明：用户怎么用、开发者怎么接、哪些受到中国大陆地区条件限制。",
-      ja: "Xcode 27.3 と中国本土向け iPhone 16 Pro で再テスト。利用者が使う機能、開発者が呼び出す API、中国本土の地域条件を分けて説明します。",
-      en: "Retested with Xcode 27.3 on a mainland China iPhone 16 Pro. Three sections explain user features, developer APIs, and mainland China availability conditions."
+      zh: "分别测试国行 iPhone 16 Pro 与 iOS 27.3 模拟器，区分用户功能、开发者接口和中国大陆限制；千问与 Apple 模型分开记录。",
+      ja: "中国本土向け iPhone 16 Pro と iOS 27.3 シミュレータの結果を分け、利用者向け機能、開発 API、中国本土の制限を説明します。",
+      en: "Separate tests on a mainland China iPhone 16 Pro and iOS 27.3 simulator, covering user features, developer APIs, and regional limits. Qwen and Apple model access are recorded separately."
     },
     report_read: { zh: "阅读报告 →", ja: "レポートを読む（中国語）→", en: "Read report (Chinese) →" },
     report_source: { zh: "工具与证据 ↗", ja: "ツールと検証記録 ↗", en: "Tool and evidence ↗" },
